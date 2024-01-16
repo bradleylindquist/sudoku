@@ -55,17 +55,17 @@ window.onload = function () {
   setGame();
 };
 
-// const numberToLetterMap = {
-//   1: "L",
-//   2: "I",
-//   3: "N",
-//   4: "K",
-//   5: "Q",
-//   6: "U",
-//   7: "E",
-//   8: "S",
-//   9: "T",
-// };
+const numberToLetterMap = {
+  1: "L",
+  2: "I",
+  3: "N",
+  4: "K",
+  5: "Q",
+  6: "U",
+  7: "E",
+  8: "S",
+  9: "T",
+};
 
 function setGame() {
   // letters L-T
@@ -84,15 +84,21 @@ function setGame() {
     for (let c = 0; c < 9; c++) {
       let tile = document.createElement("div");
       tile.id = r.toString() + "-" + c.toString();
-      if (board[r][c] != "-") {
+      if (board[r][c] !== "-") {
         tile.innerText = board[r][c];
         tile.classList.add("tile-start");
       }
-      if (r == 2 || r == 5) {
-        tile.classList.add("horizontal-line");
+      if (r === 2 || r === 5) {
+        tile.classList.add("horizontal-line-bottom");
       }
-      if (c == 2 || c == 5) {
-        tile.classList.add("vertical-line");
+      if (r === 3 || r === 6) {
+        tile.classList.add("horizontal-line-top");
+      }
+      if (c === 2 || c === 5) {
+        tile.classList.add("vertical-line-right");
+      }
+      if (c === 3 || c === 6) {
+        tile.classList.add("vertical-line-left");
       }
       tile.addEventListener("click", selectTile);
       tile.classList.add("tile");
@@ -111,7 +117,7 @@ function selectNumber() {
 
 function selectTile() {
   if (numSelected) {
-    if (this.innerText != "") {
+    if (this.innerText !== "") {
       return;
     }
 

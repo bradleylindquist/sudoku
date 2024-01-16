@@ -1,7 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  background: lightgray;
+  background: linear-gradient(90deg, gray, whitesmoke, gray);
 }
 
 hr {
@@ -9,17 +9,17 @@ hr {
 }
 
 #errors {
-  color: coral;
+  color: hotpink;
 }
 
 #board {
   width: 450px;
   height: 450px;
-  background-color: rgb(74, 159, 74);
+  background: linear-gradient(90deg, rgb(17, 131, 245), blue, rgb(12, 113, 214));
   margin: 0 auto;   /* this centers the board */
   display: flex;
   flex-wrap: wrap;
-  color: whitesmoke;
+  color: white;
 }
 
 .tile {
@@ -39,16 +39,17 @@ hr {
   width: 450px;
   height: 50px;
 
-  background-color: yellow;
+  background-color: black;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  color: hotpink;
 }
 
 .number {
   width: 44px;
   height: 44px;
-  border: 1px solid black;
+  border: 1px solid white;
   margin: 2px;
 
   /* text; */
@@ -60,17 +61,25 @@ hr {
 }
 
 .number-selected {
-  background-color: gray;
+  background: linear-gradient(135deg, gray, navy);
 }
 
 .tile-start {
-  background-color: darkgreen;
+  background: linear-gradient(135deg, navy, gray);
 }
 
-.horizontal-line {
-  border-bottom: 1px solid red;
+.horizontal-line-top {
+  border-top: 1px solid hotpink;
 }
 
-.vertical-line {
-  border-right: 1px solid red;
+.horizontal-line-bottom {
+  border-bottom: 1px solid hotpink;
+}
+
+.vertical-line-right {
+  border-right: 1px solid hotpink;
+}
+
+.vertical-line-left {
+  border-left: 1px solid hotpink;
 }
