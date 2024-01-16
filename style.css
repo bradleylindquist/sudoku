@@ -15,10 +15,11 @@ hr {
 #board {
   width: 450px;
   height: 450px;
-  background-color: green;
-   margin: 0 auto;   /* this centers the board */
-   display: flex;
-   flex-wrap: wrap;
+  background-color: rgb(74, 159, 74);
+  margin: 0 auto;   /* this centers the board */
+  display: flex;
+  flex-wrap: wrap;
+  color: whitesmoke;
 }
 
 .tile {
@@ -56,4 +57,20 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.number-selected {
+  background-color: gray;
+}
+
+.tile-start {
+  background-color: darkgreen;
+}
+
+.horizontal-line {
+  border-bottom: 1px solid red;
+}
+
+.vertical-line {
+  border-right: 1px solid red;
 }
